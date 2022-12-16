@@ -5,11 +5,10 @@
         max-width: 1200px;
         display: flex;
         flex-direction: column;
-        padding: 20px;
-        padding: 20px;
+        padding: 32px;
     }
     .content > *{
-        width: 80%;
+        width: 90%;
         max-width: 1200px;
     }
     .contentTitle{
@@ -22,16 +21,14 @@
         text-align: center;
     }
     .itemTitle{
-        width: 80%;
-        min-height: 250px;
+        width: 25%;
         display: flex;
         justify-content: flex-end;
         align-items: flex-start;
         padding-right: 32px;
     }
     .itemDescription{
-        width: 80%;
-        min-height: 250px;
+        width: 65%;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;

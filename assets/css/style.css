@@ -1,6 +1,7 @@
 html {
   font-family: montserrat;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 p {

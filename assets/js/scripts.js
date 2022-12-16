@@ -1,11 +1,20 @@
 // Menu toggle
 $(document).ready(function(){
-    $("#toggle-container").click(function(){
-      $("#sidebar").css({"transition": "400ms", "margin-left": "0px"});
-    });
-    $("#toggle-container-close").click(function(){
-      $("#sidebar").css({"transition": "400ms", "margin-left": "-350px"});
-    });
+    if ( $(window).width() <= 480 ) {
+      $("#toggleOpen").click(function(){
+        $("#sidebar").css({"transition": "400ms", "margin-left": "0px"});
+      });
+      $("#toggleClose").click(function(){
+        $("#sidebar").css({"transition": "400ms", "margin-left": "-100vw"});
+      });
+    } else {
+      $("#toggleOpen").click(function(){
+        $("#sidebar").css({"transition": "400ms", "margin-left": "0px"});
+      });
+      $("#toggleClose").click(function(){
+        $("#sidebar").css({"transition": "400ms", "margin-left": "-350px"});
+      });
+    }
 });
 
 const d = new Date();

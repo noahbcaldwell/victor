@@ -133,9 +133,26 @@ p {
   margin: 16px;
 }
 
-#toggle-container {
+#sticky-header {
+  height: 65px;
   position: fixed;
-  top: 20px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  color: #FFF;
+  font-size: 30px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1120px) {
+  #sticky-header {
+    background-color: #000;
+  }
+}
+#toggle-container {
+  position: absolute;
+  top: 17.5px;
   left: 20px;
   color: #FFF;
   font-size: 30px;
@@ -185,6 +202,15 @@ p {
 @media only screen and (max-width: 1120px) {
   #sidebar {
     margin-left: -350px;
+  }
+}
+@media only screen and (max-width: 1120px) {
+  #hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    background-attachment: scroll;
   }
 }
 @media only screen and (max-width: 1120px) {

@@ -117,10 +117,25 @@ p{
     line-height: 1.4;
     margin: 16px;
 }
-
-#toggle-container{
+#sticky-header{
+    height: 65px;
     position: fixed;
-    top: 20px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    color: $primary;
+    font-size: 30px;
+    z-index: 1;
+    cursor: pointer;
+}
+@media only screen and (max-width: 1120px) {
+    #sticky-header{
+        background-color: $secondary;
+    }
+}
+#toggle-container{
+    position: absolute;
+    top: calc((65px - 30px)/2);
     left: 20px;
     color: $primary;
     font-size: 30px;
@@ -162,11 +177,15 @@ p{
     background-color: $secondary;
     text-align: center;
 }
-
-
 @media only screen and (max-width: 1120px) {
     #sidebar{
         margin-left: -350px;
+    }
+}
+@media only screen and (max-width: 1120px) {
+    #hero{
+        @include center;
+        background-attachment: scroll;
     }
 }
 @media only screen and (max-width: 1120px) {

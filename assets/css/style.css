@@ -284,10 +284,9 @@ p {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    padding: 20px;
   }
   .content > * {
-    width: 80%;
+    width: 75%;
     max-width: 1200px;
   }
   .itemTitle {
@@ -300,7 +299,7 @@ p {
     text-align: center;
   }
   .itemDescription {
-    width: 90%;
+    width: 100%;
     min-height: auto;
     display: flex;
     justify-content: center;

@@ -1,192 +1,108 @@
-@mixin educationStyles{
-    #education{
-        min-height: 50vh;
-        min-width: 100%;
-        max-width: 1200px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-    }
-    @media only screen and (max-width: 1120px) {
-        #education{
-            min-height: auto;
-            min-width: 100%;
-            max-width: 1200px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-    }
-    @media only screen and (max-width: 768px) {
-        #education{
-            min-height: auto;
-            min-width: 100%;
-            max-width: 1200px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        #edu-left-column, #edu-right-column{
-            width: 80% !important;
-            height: 100%;
-            padding: 0px !important;
-            display: flex;
-            align-items: center; 
-        }
-        #edu-left-column{
-            justify-content: center;
-            align-items: center;
-            border-right: none !important;
-        }
-        #edu-right-column{
-            justify-content: center;
-            align-items: center;
-        }
-        #edu-1-left{
-            width: 100% !important;
-            height: 100% !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-        }
-        #edu-1-right{
-            width: 100% !important;
-            height: 100% !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            text-align: center;
-        }
-    }
-    #edu-left-column, #edu-right-column{
-        width: 50%;
-        height: 80%;
-        padding: 20px;
-        display: flex;
-        align-items: center; 
-    }
-    #edu-left-column{
-        justify-content: flex-end;
-        border-right: $secondary 1px solid;
-    }
-    #edu-right-column{
-        justify-content: flex-start;
-    }
-    #edu-1-left{
-        width: 80%;
-        height: 100%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-end;
-    }
-    #edu-1-right{
-        width: 80%;
-        height: 100%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-end;
-    }
-}
-
-@mixin experienceStyles{
-    #experience{
+@mixin contentStyles{
+    .content{
         @include center;
-        min-height: 50vh;
         min-width: 100%;
         max-width: 1200px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         padding: 20px;
         padding: 20px;
     }
-    #ex-left-column, #ex-right-column{
-        width: 50%;
-        height: 80%;
-        padding: 20px;
+    .content > *{
+        width: 80%;
+        max-width: 1200px;
+    }
+    .contentTitle{
+        width: 100%;
+        padding: 32px;
+        text-transform: uppercase;
+        font-size: 1.75rem;
+        color: $primary;
+        background-color: $secondary;
+        text-align: center;
+    }
+    .itemTitle{
+        width: 80%;
+        min-height: 250px;
         display: flex;
-        align-items: center;    
-    }
-    #ex-left-column{
         justify-content: flex-end;
-        border-right: $secondary 1px solid;
+        align-items: flex-start;
+        padding-right: 32px;
     }
-    #ex-right-column{
+    .itemDescription{
+        width: 80%;
+        min-height: 250px;
+        display: flex;
         justify-content: flex-start;
-    }
-    #ex-1-left{
-        width: 80%;
-        height: 100%;
-        display: flex;
         align-items: flex-start;
-        justify-content: flex-end;
+        align-items: center;
+        padding-left: 32px;
+        border-left: 1px $secondary solid
     }
-    #ex-1-right{
-        width: 80%;
-        height: 100%;
+    .item{
         display: flex;
-        align-items: flex-start;
-        justify-content: flex-end;
+        flex-direction: row;
     }
     
-    @media only screen and (max-width: 1120px) {
-        #experience{
-            min-height: auto;
-            min-width: 100%;
-            max-width: 1200px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            color: white;
-            background-color: $primary;
-            padding: 20px;
-        }
-    }
     @media only screen and (max-width: 768px) {
-        #experience{
+        .content{
             @include center;
-            min-height: auto;
             min-width: 100%;
             max-width: 1200px;
             display: flex;
             flex-direction: column;
-            color: $secondary;
+            padding: 20px;
             padding: 20px;
         }
-        #ex-left-column, #ex-right-column{
-            width: 80% !important;
-            height: 100%;
-            padding: 0px !important;
+        .content > *{
+            width: 80%;
+            max-width: 1200px;
+        }
+        .itemTitle{
+            width: 80%;
+            min-height: auto;
             display: flex;
-            align-items: center; 
-        }
-        #ex-left-column{
             justify-content: center;
             align-items: center;
-            border-right: none !important;
-        }
-        #ex-right-column{
-            justify-content: center;
-            align-items: center;
-        }
-        #ex-1-left{
-            @include center;
-            width: 100% !important;
-            height: 100% !important;
-        }
-        #ex-1-right{
-            @include center;
-            width: 100% !important;
-            height: 100% !important;
-            display: flex !important;
+            padding-right: 0px;
             text-align: center;
         }
+        .itemDescription{
+            width: 80%;
+            min-height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-left: 0px;
+            border-left: none;
+            text-align: center;
+        }
+        .item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 25px;
+            border-bottom: 1px $secondary solid;
+        }
+        .item:last-of-type{
+            border-bottom: none;
+        }
     }
+}
+.left-column, .right-column{
+    height: 90%;
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    align-items: center;    
+}
+.left-column{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.right-column{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }

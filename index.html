@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Cinzel|Roboto">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $("#toggle-container").click(function(){
+            $("#sidebar").css({"transition": "400ms", "margin-left": "0px"});
+          });
+          $("#toggle-container-close").click(function(){
+            $("#sidebar").css({"transition": "400ms", "margin-left": "-350px"});
+          });
+        });
+    </script>
+</head>
+<body>
+    <div id="toggle-container">
+        <span class="lnr lnr-menu"></span>
+    </div>
+    <div id="sidebar">
+        <div id="toggle-container-close">
+            <span class="lnr lnr-cross"></span>
+        </div>
+        <div id="menu">
+            <div id="photo-container">
+                <div id="profile-photo"></div>
+            </div>
+            <nav>
+                <a id="nav-item-1" href="#hero">
+                    <div>Home</div>
+                </a>
+                <a id="nav-item-2" href="#education">
+                    <div>Education</div>
+                </a>
+                <a id="nav-item-3" href="#experience">
+                    <div>Experience</div>
+                </a>
+                <a id="linkedin" href="#">
+                    <div>LinkedIn</div>
+                </a>
+            </nav>
+        </div>
+        <div id="social-links">
+            <div id="github">
+
+            </div>
+        </div> 
+    </div>
+    <div id="page-container">
+        <div id="hero">
+            <div id="hero-content">
+                <h2 id="hero-title">Victor Theme</h2>
+                <h3 id="hero-subtitle">A classic Sass/HTML portfolio theme</h3>
+            </div>
+        </div>
+        <div id="edu-title">EDUCATION</div>
+        <div id="education">
+            <div id="edu-left-column">
+                <div id="edu-1-left">
+                    <p>Harvard | 2022</p>
+                </div>
+            </div>
+            <div id="edu-right-column">
+                <div id="edu-1-right">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </div>
+        <div id="ex-title">EXPERIENCE</div>
+        <div id="experience">
+            <div id="ex-left-column">
+                <div id="ex-1-left">
+                    <p>Job 1 | 2022</p>
+                </div>
+            </div>
+            <div id="ex-right-column">
+                <div id="ex-1-right">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p>© Copyright <span id="year"></span> | Noah Caldwell</p>
+            <script>
+                const d = new Date();
+                let year = d.getFullYear();
+                document.getElementById("year").innerHTML = year;
+            </script>
+        </div>
+    </div>
+</body>
+</html>

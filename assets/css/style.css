@@ -300,7 +300,7 @@ p {
     text-align: center;
   }
   .itemDescription {
-    width: 80%;
+    width: 90%;
     min-height: auto;
     display: flex;
     justify-content: center;

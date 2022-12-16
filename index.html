@@ -9,16 +9,6 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-          $("#toggle-container").click(function(){
-            $("#sidebar").css({"transition": "400ms", "margin-left": "0px"});
-          });
-          $("#toggle-container-close").click(function(){
-            $("#sidebar").css({"transition": "400ms", "margin-left": "-350px"});
-          });
-        });
-    </script>
 </head>
 <body>
     <div id="toggle-container">
@@ -36,10 +26,10 @@
                 <a id="nav-item-1" href="#hero">
                     <div>Home</div>
                 </a>
-                <a id="nav-item-2" href="#education">
+                <a id="nav-item-2" href="#edu-title">
                     <div>Education</div>
                 </a>
-                <a id="nav-item-3" href="#experience">
+                <a id="nav-item-3" href="#ex-title">
                     <div>Experience</div>
                 </a>
                 <a id="linkedin" href="#">
@@ -88,12 +78,8 @@
         </div>
         <div id="footer">
             <p>© Copyright <span id="year"></span> | Noah Caldwell</p>
-            <script>
-                const d = new Date();
-                let year = d.getFullYear();
-                document.getElementById("year").innerHTML = year;
-            </script>
         </div>
     </div>
+    <script src="./assets/js/scripts.js"></script>
 </body>
 </html>
